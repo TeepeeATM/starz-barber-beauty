@@ -1,6 +1,11 @@
 import type { Metadata } from "next";
 import { bookingUrl, services } from "@/data/site";
-export const metadata: Metadata = { title:"Services & Pricing", description:"Haircuts, beard care, shaves, color and natural hair services at Starz Barber & Beauty in Horn Lake." };
-export default function Services(){const groups=[...new Set(services.map(s=>s.group))];return <><section className="page-hero"><h1>Services and prices</h1><p>Choose the service that fits. Prices marked “+” may change based on length or style.</p></section><section className="section narrow">{groups.map(group=><div className="service-group" key={group}><h2>{group}</h2><ServiceListFor group={group}/></div>)}<div className="policy-note"><h2>Need a time outside regular hours?</h2><p>Early and after-hours appointments may be available for an additional fee starting at $20. Check availability or call the shop before arriving.</p></div><a className="button" href={bookingUrl}>Book Appointment</a></section></>}
-function ServiceListFor({group}:{group:string}){const subset=services.filter(s=>s.group===group);return <div className="service-list">{subset.map(s=><article className="service-row" key={s.name}><div><h3>{s.name}</h3><p>{s.note}</p></div><div className="service-meta"><strong>{s.price}</strong><span>{s.time}</span></div></article>)}</div>}
 
+export const metadata: Metadata = { title:"Services & Pricing", description:"Haircuts, beard care, shaves, color and natural hair services at Starz Barber & Beauty in Horn Lake." };
+
+export default function Services(){
+  const groups=[...new Set(services.map(s=>s.group))];
+  return <><section className="page-hero"><h1>Services and prices</h1><p>Compare the time, finish and price before booking. Services marked “+” may vary with hair length, density or the requested style.</p></section><section className="section narrow">{groups.map(group=><div className="service-group" key={group}><h2>{group}</h2><ServiceListFor group={group}/></div>)}<div className="policy-note"><h2>Need a time outside regular hours?</h2><p>Early and after-hours appointments may be available for an additional fee starting at $20. Check availability or call the shop before arriving.</p></div><a className="button" href={bookingUrl}>Book Appointment</a></section></>;
+}
+
+function ServiceListFor({group}:{group:string}){const subset=services.filter(s=>s.group===group);return <div className="service-list">{subset.map(s=><article className="service-row" key={s.name}><div><h3>{s.name}</h3><p>{s.note}</p></div><div className="service-meta"><strong>{s.price}</strong><span>{s.time}</span></div></article>)}</div>}
