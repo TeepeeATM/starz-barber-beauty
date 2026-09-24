@@ -53,3 +53,26 @@
 @media (prefers-reduced-motion: reduce) {
   .workImage img { transition: none; }
 }
+
+.homeMap { padding-bottom: 100px; }
+.homeMap > div {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 24px;
+}
+.homeMap h2, .homeMap p { margin-bottom: 0; }
+.homeMap iframe {
+  display: block;
+  width: 100%;
+  height: clamp(380px, 52vw, 590px);
+  border: 1px solid var(--line);
+  filter: saturate(.72) contrast(1.04);
+}
+@media (max-width: 800px) {
+  .homeMap { padding-bottom: 64px; }
+  .homeMap > div { display: block; }
+  .homeMap p { margin-top: 10px; }
+}
+
