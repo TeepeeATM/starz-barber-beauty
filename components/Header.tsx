@@ -8,7 +8,6 @@ const navigation = [
   { href: "/services", label: "Services" },
   { href: "/gallery", label: "Gallery" },
   { href: "/about", label: "About" },
-  { href: "/contact", label: "Shop Location" },
 ];
 
 export function Header() {
