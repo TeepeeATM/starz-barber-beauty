@@ -1,0 +1,7 @@
+.brand-mark { display: block; width: clamp(112px, 10vw, 146px); height: auto; }
+.brand-mark img { display: block; width: 100%; height: auto; }
+.footer-brand.brand-mark { width: min(220px, 75%); margin-bottom: 22px; }
+.footer-brand.brand-mark img { filter: invert(1); }
+@media (max-width: 420px) {
+  .site-header .brand-mark { width: 102px; }
+}
