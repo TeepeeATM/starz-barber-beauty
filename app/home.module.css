@@ -1,31 +1,3 @@
-.sectionToolbar {
-  position: sticky;
-  top: 82px;
-  z-index: 15;
-  display: flex;
-  justify-content: center;
-  overflow-x: auto;
-  background: var(--ivory);
-  border-bottom: 1px solid var(--line);
-  scrollbar-width: none;
-}
-
-.sectionToolbar::-webkit-scrollbar { display: none; }
-
-.sectionToolbar a {
-  flex: 0 0 auto;
-  padding: 18px 28px;
-  border-right: 1px solid var(--line);
-  color: var(--ink);
-  font-weight: 600;
-  text-decoration: none;
-  transition: background .2s, color .2s;
-}
-
-.sectionToolbar a:first-child { border-left: 1px solid var(--line); }
-.sectionToolbar a:hover,
-.sectionToolbar a:focus-visible { background: var(--ink); color: var(--white); }
-
 .workGrid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -55,12 +27,10 @@
 }
 
 @media (max-width: 800px) {
-  .sectionToolbar { top: 72px; justify-content: flex-start; }
-  .sectionToolbar a { padding: 15px 20px; font-size: .92rem; }
   .workGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
   .shopImage { margin-top: 38px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .sectionToolbar a { transition: none; }
+  .workImage img { transition: none; }
 }
