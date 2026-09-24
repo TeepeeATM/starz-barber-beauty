@@ -26,6 +26,25 @@
   object-fit: contain;
 }
 
+.shopHours {
+  margin-top: 34px;
+  padding-top: 26px;
+  border-top: 1px solid var(--line);
+}
+
+.shopHours h3 { margin-bottom: 18px; font-size: 1.35rem; }
+.shopHours dl { margin: 0 0 20px; }
+.shopHours dl div {
+  display: grid;
+  grid-template-columns: minmax(130px, 1fr) auto;
+  gap: 18px;
+  padding: 9px 0;
+  border-bottom: 1px solid var(--line);
+}
+.shopHours dt { font-weight: 600; }
+.shopHours dd { margin: 0; text-align: right; }
+.shopHours a { font-weight: 600; }
+
 @media (max-width: 800px) {
   .workGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
   .shopImage { margin-top: 38px; }
