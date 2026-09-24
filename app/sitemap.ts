@@ -1,0 +1,1 @@
+import type { MetadataRoute } from "next";export default function sitemap():MetadataRoute.Sitemap{const pages=["","/services","/gallery","/about","/contact","/privacy","/terms","/accessibility"];return pages.map(path=>({url:`https://starzbarberbeauty.com${path}`,lastModified:new Date()}))}

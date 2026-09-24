@@ -1,0 +1,8 @@
+.mobile-menu { display: none; }
+@media (max-width: 800px) {
+  .mobile-menu { display: block; position: relative; margin-left: auto; }
+  .mobile-menu summary { cursor: pointer; font-size: .8rem; font-weight: 600; list-style: none; }
+  .mobile-menu summary::-webkit-details-marker { display: none; }
+  .mobile-menu[open] div { position: absolute; top: 36px; right: -75px; width: 180px; background: var(--white); border: 1px solid var(--line); box-shadow: 0 16px 30px rgba(32,26,23,.14); padding: 8px; display: grid; }
+  .mobile-menu div a { padding: 11px 10px; text-decoration: none; border-bottom: 1px solid var(--line); }
+}
