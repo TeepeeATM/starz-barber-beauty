@@ -19,5 +19,5 @@ export const services = [
   { group: "Finishing touches", name: "Eyebrow tint", price: "$15", time: "20 min", note: "Eyebrow tint for added definition." },
 ];
 
-export const gallery = ["03","07","09","15","18","20","21","22","24","27","30","31","32","33","36","44"].map((n, i) => ({ src: `/images/gallery/${n}-starz-work.jpeg`, alt: ["Fresh taper and beard detail","Precision fade finished at Starz","Clean youth haircut","Loc styling and finish"][i % 4] }));
+export const gallery = ["07","09","15","18","20","21","22","24","27","30","31","32","33","36","44"].map((n, i) => ({ src: `/images/gallery/${n}-starz-work.jpeg`, alt: ["Braided style finished at Starz","Loc styling and finish","Fresh taper and beard detail","Precision haircut finished at Starz"][i % 4] }));
 
