@@ -5,7 +5,7 @@ import { SectionHeading } from "@/components/SectionHeading";
 import { ServiceList } from "@/components/ServiceList";
 import styles from "./home.module.css";
 
-export default function Home() {
+// Production navigation refresh\nexport default function Home() {
   return <>
     <section className="hero">
       <div className="hero-image hero-carousel">
