@@ -1,9 +1,9 @@
-.social-rail{position:fixed;z-index:30;left:0;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;background:var(--ink);box-shadow:0 10px 30px rgba(0,0,0,.22)}
-.social-rail a{width:48px;height:48px;display:flex;align-items:center;gap:13px;color:var(--white);text-decoration:none;overflow:hidden;transition:width .25s ease,background .25s ease}
+.social-rail{position:fixed;z-index:30;right:0;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;background:var(--ink);box-shadow:0 10px 30px rgba(0,0,0,.22)}
+.social-rail a{width:48px;height:48px;display:flex;align-items:center;gap:13px;color:var(--white);text-decoration:none;overflow:hidden;transition:width .25s ease,background .25s ease;flex-direction:row-reverse;justify-content:flex-start}
 .social-rail a:hover,.social-rail a:focus-visible{width:178px;background:var(--brick)}
-.social-rail svg{width:20px;height:20px;min-width:20px;margin-left:14px;fill:currentColor;stroke:currentColor;stroke-width:1.7}
+.social-rail svg{width:20px;height:20px;min-width:20px;margin-right:14px;fill:currentColor;stroke:currentColor;stroke-width:1.7}
 .social-rail svg rect,.social-rail svg circle{fill:none}
 .social-rail svg .fill{fill:currentColor;stroke:none}
 .social-rail span{white-space:nowrap;font-size:.78rem;font-weight:600}
-@media(max-width:800px){.social-rail{left:auto;right:12px;top:auto;bottom:12px;transform:none;flex-direction:row;border-radius:999px;overflow:hidden}.social-rail a,.social-rail a:hover,.social-rail a:focus-visible{width:44px;height:44px}.social-rail svg{margin-left:12px}.social-rail span{display:none}}
+@media(max-width:800px){.social-rail{right:12px;top:auto;bottom:12px;transform:none;flex-direction:row;border-radius:999px;overflow:hidden}.social-rail a,.social-rail a:hover,.social-rail a:focus-visible{width:44px;height:44px}.social-rail svg{margin:0 12px}.social-rail span{display:none}}
 
