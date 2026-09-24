@@ -1,0 +1,28 @@
+.mapSection {
+  padding-bottom: 90px;
+}
+
+.mapSection > div {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 24px;
+}
+
+.mapSection h2,
+.mapSection p { margin-bottom: 0; }
+
+.mapSection iframe {
+  display: block;
+  width: 100%;
+  height: clamp(380px, 52vw, 590px);
+  border: 1px solid var(--line);
+  filter: saturate(.72) contrast(1.04);
+}
+
+@media (max-width: 700px) {
+  .mapSection { padding-bottom: 64px; }
+  .mapSection > div { display: block; }
+  .mapSection p { margin-top: 10px; }
+}
