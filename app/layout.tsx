@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import "./social.css";
 import "./hero-carousel.css";
+import "./brand.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { ScrollReveal } from "@/components/ScrollReveal";
