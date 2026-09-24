@@ -1,0 +1,90 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  height: 82px;
+  display: grid;
+  grid-template-columns: 210px 1fr auto;
+  align-items: center;
+  gap: 34px;
+  padding: 0 max(20px, calc((100vw - 1320px) / 2));
+  background: var(--ivory);
+  border-bottom: 1px solid var(--line);
+}
+
+.logo { display: block; width: 188px; }
+.logo img { width: 100%; height: auto; }
+.desktopNav { display: flex; justify-content: center; gap: clamp(18px, 2.2vw, 34px); }
+.desktopNav a { position: relative; padding: 28px 0 25px; text-decoration: none; }
+.desktopNav a::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 20px;
+  left: 0;
+  height: 1px;
+  background: var(--brick);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform .22s ease;
+}
+.desktopNav a:hover::after,
+.desktopNav a:focus-visible::after { transform: scaleX(1); transform-origin: left; }
+.mobileMenu { display: none; }
+
+@media (max-width: 900px) {
+  .header { height: 72px; display: flex; justify-content: space-between; padding-inline: 18px; }
+  .logo { width: 150px; }
+  .desktopNav, .desktopBooking { display: none; }
+  .mobileMenu { display: block; }
+  .mobileMenu summary {
+    position: relative;
+    min-width: 86px;
+    min-height: 46px;
+    display: flex;
+    align-items: center;
+    padding: 0 34px 0 12px;
+    border: 1px solid var(--ink);
+    cursor: pointer;
+    list-style: none;
+    font-weight: 600;
+  }
+  .mobileMenu summary::-webkit-details-marker { display: none; }
+  .mobileMenu summary i {
+    position: absolute;
+    right: 11px;
+    width: 15px;
+    height: 1px;
+    background: currentColor;
+    transition: transform .2s;
+  }
+  .mobileMenu summary i:first-of-type { transform: translateY(-3px); }
+  .mobileMenu summary i:last-of-type { transform: translateY(3px); }
+  .mobileMenu[open] summary i:first-of-type { transform: rotate(45deg); }
+  .mobileMenu[open] summary i:last-of-type { transform: rotate(-45deg); }
+  .mobileMenu nav {
+    position: absolute;
+    top: 72px;
+    right: 0;
+    left: 0;
+    display: grid;
+    padding: 18px;
+    background: var(--ivory);
+    border-bottom: 1px solid var(--line);
+    box-shadow: 0 18px 32px rgba(32,26,23,.12);
+  }
+  .mobileMenu nav > a:not(:last-child) {
+    min-height: 52px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--line);
+    font-family: var(--serif);
+    font-size: 1.3rem;
+    text-decoration: none;
+  }
+  .mobileMenu nav .button { margin-top: 18px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .desktopNav a::after, .mobileMenu summary i { transition: none; }
+}
