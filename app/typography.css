@@ -1,0 +1,80 @@
+:root {
+  --serif: var(--font-display), Georgia, serif;
+  --sans: var(--font-body), Arial, sans-serif;
+}
+
+body {
+  font-family: var(--sans);
+  font-weight: 430;
+  letter-spacing: -.01em;
+}
+
+h1, h2, h3 {
+  font-family: var(--serif);
+  letter-spacing: -.035em;
+}
+
+h1 { line-height: 1.02; }
+h2 { line-height: 1.08; }
+
+.section-heading h2,
+.page-hero h1,
+.split-copy h2,
+.family h2,
+.visit-cta h2 {
+  text-wrap: balance;
+}
+
+.section-heading > div > p,
+.page-hero > p {
+  max-width: 680px;
+  font-size: clamp(1.05rem, 1.6vw, 1.22rem);
+  line-height: 1.65;
+}
+
+.page-hero > p { margin-inline: auto; }
+
+.hero-copy .lede {
+  max-width: 690px;
+  font-family: var(--serif);
+  font-size: clamp(1.55rem, 3.2vw, 2.55rem);
+  line-height: 1.2;
+  letter-spacing: -.025em;
+}
+
+.proof strong {
+  font-family: var(--serif);
+  font-size: 1.55rem;
+  font-weight: 700;
+}
+
+.service-group > h2 {
+  margin: 70px 0 10px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid var(--ink);
+  font-style: italic;
+}
+
+.service-row h3 {
+  margin-bottom: 8px;
+  font-size: clamp(1.25rem, 2vw, 1.55rem);
+}
+
+.service-meta strong {
+  font-family: var(--serif);
+  font-size: 1.25rem;
+}
+
+.footer-main h2 {
+  font-family: var(--sans);
+  font-size: .86rem;
+  font-weight: 700;
+  letter-spacing: .11em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 700px) {
+  .hero-copy .lede { font-size: clamp(1.45rem, 7vw, 2rem); }
+  .section-heading > div > p,
+  .page-hero > p { font-size: 1rem; }
+}
