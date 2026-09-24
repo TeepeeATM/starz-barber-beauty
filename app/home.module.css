@@ -26,9 +26,39 @@
 .sectionToolbar a:hover,
 .sectionToolbar a:focus-visible { background: var(--ink); color: var(--white); }
 
+.workGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 36px;
+}
+
+.workImage {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  background: var(--sand);
+}
+
+.workImage img {
+  object-fit: cover;
+  object-position: center top;
+  transition: transform .45s ease;
+}
+
+.workImage:hover img { transform: scale(1.025); }
+
+.shopImage {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
 @media (max-width: 800px) {
   .sectionToolbar { top: 72px; justify-content: flex-start; }
   .sectionToolbar a { padding: 15px 20px; font-size: .92rem; }
+  .workGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+  .shopImage { margin-top: 38px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
