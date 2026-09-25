@@ -1,0 +1,13 @@
+.site-header .brand span,.site-header .brand small{transition:transform .28s ease,letter-spacing .28s ease,color .28s ease}
+.site-header .brand:hover span,.site-header .brand:focus-visible span{transform:translateY(-2px) rotate(-1deg);letter-spacing:.12em;color:var(--brick)}
+.site-header .brand:hover small,.site-header .brand:focus-visible small{transform:translateX(3px);letter-spacing:.11em}
+.reviews-section{padding:100px 0;background:var(--white);overflow:hidden}
+.reviews-heading{display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:38px}
+.google-rating{display:flex;align-items:center;gap:9px;margin-bottom:10px;font-size:.9rem}.google-rating strong{font-size:1.2rem}.google-rating span,.review-stars{color:#f4b400;letter-spacing:.08em}
+.review-controls{display:flex;gap:8px}.review-controls button{width:46px;height:46px;border:1px solid var(--ink);background:transparent;color:var(--ink);font-size:1.25rem;cursor:pointer;transition:background .2s,color .2s}.review-controls button:hover{background:var(--ink);color:var(--white)}
+.reviews-rail{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:thin;padding:0 max(20px,calc((100vw - 1180px)/2)) 20px}
+.review-card{flex:0 0 min(390px,82vw);min-height:220px;padding:32px;background:var(--ivory);border:1px solid var(--line);scroll-snap-align:start;display:flex;flex-direction:column;justify-content:space-between}
+.review-card blockquote{font-family:var(--serif);font-size:1.55rem;line-height:1.25;margin:20px 0}.review-card p{margin:0;font-size:.82rem;color:#625750}
+.visit-cta.enhanced{min-height:470px;display:flex;flex-direction:column;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--sand),#e7ddd0)}.visit-kicker{font-size:.82rem;font-weight:600;letter-spacing:.08em}.visit-cta.enhanced .actions{justify-content:center}.visit-cta.enhanced .button-outline{background:transparent}
+@media(max-width:800px){.reviews-section{padding:72px 0}.reviews-heading{align-items:flex-start}.review-card{min-height:200px;padding:25px}.visit-cta.enhanced{min-height:420px}}
+
