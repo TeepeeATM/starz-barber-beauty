@@ -1,8 +1,13 @@
 .hero-carousel { background: #201a17; }
-.hero-slide { object-fit: contain; object-position: center; opacity: 0; animation: hero-crossfade 18s infinite; }
+.hero-slide { object-fit: cover; object-position: center; opacity: 0; animation: hero-crossfade 18s infinite; filter: none; }
 .hero-slide.slide-one { animation-delay: 0s; }
-.hero-slide.slide-two { animation-delay: 6s; }
-.hero-slide.slide-three { animation-delay: 12s; object-position: center; }
+.hero-slide.slide-two { animation-delay: 6s; object-position: 50% 42%; }
+.hero-slide.slide-three { animation-delay: 12s; object-position: 50% 45%; }
+.hero-shade {
+  background:
+    linear-gradient(90deg, rgba(20,14,12,.72) 0%, rgba(20,14,12,.38) 42%, rgba(20,14,12,.06) 78%),
+    linear-gradient(0deg, rgba(20,14,12,.42), transparent 58%);
+}
 @keyframes hero-crossfade {
   0% { opacity: 0; }
   5% { opacity: 1; }
@@ -13,4 +18,13 @@
 @media (prefers-reduced-motion: reduce) {
   .hero-slide { animation: none; opacity: 0; }
   .hero-slide.slide-one { opacity: 1; }
+}
+
+@media (max-width: 800px) {
+  .hero-slide.slide-one,
+  .hero-slide.slide-two { object-position: 58% center; }
+  .hero-slide.slide-three { object-position: center; }
+  .hero-shade {
+    background: linear-gradient(0deg, rgba(20,14,12,.7) 0%, rgba(20,14,12,.18) 68%, rgba(20,14,12,.04));
+  }
 }
